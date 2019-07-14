@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent" android:layout_height="match_parent"
+
+    android:background="@android:color/holo_orange_light">
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textStyle="bold"
+        android:textSize="30sp"
+        android:layout_centerInParent="true"
+        android:textAlignment="center"
+        android:textColor="@android:color/black"
+        android:text="ChatFragment"
+        />
+
+</RelativeLayout>

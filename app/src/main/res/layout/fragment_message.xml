@@ -1,0 +1,141 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+
+    xmlns:tools="http://schemas.android.com/tools"
+    android:paddingBottom="40dp"
+    >
+    <ImageView
+        android:layout_width="250dp"
+        android:layout_height="220dp"
+        android:layout_gravity="center_horizontal"
+        android:layout_alignParentTop="true"
+        android:layout_centerInParent="true"
+        android:src="@drawable/image"/>
+    <LinearLayout
+        android:id="@+id/volumelayout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_centerInParent="true">
+        <ImageView
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:src="@drawable/sound"
+            />
+        <SeekBar
+            android:id="@+id/volumeBar"
+            android:layout_width="250dp"
+            android:layout_height="wrap_content"
+            android:max="100"
+            android:progress="50" />
+        <ImageView
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:src="@drawable/sound2"/>
+
+    </LinearLayout>
+    <TextView
+        android:id="@+id/tv"
+        android:layout_width="match_parent"
+        android:layout_below="@+id/volumelayout"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="25dp"
+        android:ellipsize="marquee"
+        android:marqueeRepeatLimit="marquee_forever"
+        android:padding="16dp"
+        android:textStyle="bold"
+        android:textColor="@android:color/black"
+        android:gravity="center_horizontal"
+        android:scrollHorizontally="true"
+        android:singleLine="true"
+        android:text="Song Name by Artist name ans also production"
+        android:textSize="24sp" />
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/parentRelativeLayout"
+        android:layout_above="@+id/positionlayout"
+        android:layout_below="@id/tv"
+        android:layout_centerInParent="true"
+        >
+        <ImageView
+            android:id="@+id/mic"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:src="@drawable/micoff"
+            />
+
+
+    </RelativeLayout>
+
+    <LinearLayout
+        android:id="@+id/positionlayout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/musicbtn"
+        android:layout_centerInParent="true"
+
+        android:layout_gravity="center_horizontal">
+        <TextView
+            android:id="@+id/elapsedTimeLabel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="00:00"/>
+        <SeekBar
+            android:id="@+id/positionBar"
+            android:layout_width="250dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="30dp"
+            android:layout_gravity="center_horizontal"/>
+        <TextView
+            android:id="@+id/remainTimeLabel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="-04:00"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+
+        android:layout_height="wrap_content"
+
+        android:id="@+id/musicbtn"
+        android:layout_centerInParent="true"
+        android:layout_alignParentBottom="true"
+        >
+
+        <android.support.v7.widget.AppCompatButton
+            android:id="@+id/rewindbtn"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_marginRight="25dp"
+            android:background="@drawable/fastrewind"
+
+            />
+        <android.support.v7.widget.AppCompatButton
+            android:id="@+id/playBtn"
+
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_marginLeft="25dp"
+            android:layout_marginRight="25dp"
+            android:background="@drawable/play"
+
+
+            />
+
+        <android.support.v7.widget.AppCompatButton
+            android:id="@+id/forwardBtn"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_marginLeft="25dp"
+            android:background="@drawable/fastforward"
+
+            />
+
+    </LinearLayout>
+
+</RelativeLayout>
